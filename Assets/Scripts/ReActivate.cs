@@ -10,11 +10,7 @@ public class ReActivate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsRe = true;
-        }
-        else
-        {
-            IsRe = false;
+            enigmeCarillon.Notes("Re");
         }
     }
 }

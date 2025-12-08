@@ -10,11 +10,7 @@ public class DoActivate : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsDo = true;
-        }
-        else
-        {
-            IsDo = false;
+            enigmeCarillon.Notes("Do");
         }
     }
 }

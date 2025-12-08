@@ -10,11 +10,7 @@ public class MiActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsMi = true;
-        }
-        else
-        {
-            IsMi = false;
+            enigmeCarillon.Notes("Mi");
         }
     }
 }

@@ -10,11 +10,7 @@ public class FaActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsFa = true;
-        }
-        else
-        {
-            IsFa = false;
+            enigmeCarillon.Notes("Fa");
         }
     }
 }

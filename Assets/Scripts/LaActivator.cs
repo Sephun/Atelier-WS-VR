@@ -10,11 +10,7 @@ public class LaActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsLa = true;
-        }
-        else
-        {
-            IsLa = false;
+            enigmeCarillon.Notes("La");
         }
     }
 }

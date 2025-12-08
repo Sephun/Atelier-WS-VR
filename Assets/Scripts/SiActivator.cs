@@ -10,11 +10,7 @@ public class SiActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsSi = true;
-        }
-        else
-        {
-            IsSi = false;
+            enigmeCarillon.Notes("Si");
         }
     }
 }
