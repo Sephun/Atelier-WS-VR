@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SolActivator : MonoBehaviour
 {
-    public GameObject Sol;
     public bool IsSol;
     public EnigmeCarillon enigmeCarillon;
 

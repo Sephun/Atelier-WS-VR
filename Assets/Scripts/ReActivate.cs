@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ReActivate : MonoBehaviour
 {
-    public GameObject Re;
     public bool IsRe;
     public EnigmeCarillon enigmeCarillon;
 

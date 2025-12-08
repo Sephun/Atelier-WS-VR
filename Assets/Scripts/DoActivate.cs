@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DoActivate : MonoBehaviour
 {
-    //public GameObject Do;
     public bool IsDo;
     public EnigmeCarillon enigmeCarillon;
 

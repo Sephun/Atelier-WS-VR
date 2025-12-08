@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MiActivator : MonoBehaviour
 {
-    public GameObject Mi;
     public bool IsMi;
     public EnigmeCarillon enigmeCarillon;
 

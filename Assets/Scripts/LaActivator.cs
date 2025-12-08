@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class LaActivator : MonoBehaviour
 {
-    public GameObject La;
     public bool IsLa;
     public EnigmeCarillon enigmeCarillon;
 
