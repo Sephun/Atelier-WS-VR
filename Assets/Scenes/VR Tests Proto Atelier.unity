@@ -2222,7 +2222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0895ce3256c47040bbed1b293cb2707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiActivator
-  Mi: {fileID: 405598200}
   IsMi: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &418720588
@@ -2848,7 +2847,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1111909848}
   gripValue:
     m_UseReference: 1
     m_Action:
@@ -2860,7 +2859,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1228329680}
   handAnimator: {fileID: 600911563}
 --- !u!1 &614273172
 GameObject:
@@ -3470,7 +3469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a386fac306604fe42bb3463acf5451eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaActivator
-  La: {fileID: 719298707}
   IsLa: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &729794673
@@ -3750,7 +3748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7a492c102eebe47976ffb39afdbca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SiActivator
-  Si: {fileID: 767374712}
   IsSi: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &781433413
@@ -3763,6 +3760,8 @@ GameObject:
   m_Component:
   - component: {fileID: 781433414}
   - component: {fileID: 781433415}
+  - component: {fileID: 781433417}
+  - component: {fileID: 781433416}
   m_Layer: 0
   m_Name: Carillon
   m_TagString: Untagged
@@ -3823,21 +3822,159 @@ MonoBehaviour:
   Sol: {fileID: 1863113164}
   La: {fileID: 719298707}
   Si: {fileID: 767374712}
-  isDo: 0
-  isRe: 0
-  isMi: 0
-  isFa: 0
-  isSol: 0
-  isLa: 0
-  isSi: 0
   Statuette1: {fileID: 389582881}
   doActivate: {fileID: 1189838304}
   reActivate: {fileID: 1335893853}
   miActivator: {fileID: 405598207}
-  FaActivator: {fileID: 1551767553}
-  SolActivator: {fileID: 1863113171}
-  LaActivator: {fileID: 719298714}
-  SiActivator: {fileID: 767374719}
+  faActivator: {fileID: 1551767553}
+  solActivator: {fileID: 1863113171}
+  laActivator: {fileID: 719298714}
+  siActivator: {fileID: 767374719}
+  DoMi: 0
+  MiDo: 0
+  MiSol: 0
+  SolMi: 0
+  SiDo: 0
+  DoSi: 0
+  SolRe: 0
+  ReSol: 0
+  MiSi: 0
+  SiMi: 0
+  LaRe: 0
+  ReLa: 0
+  FaRe: 0
+  ReFa: 0
+  ReSi: 0
+  SiRe: 0
+  TypedNotesS1:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  NoteTyped: 0
+  statuette1: 0
+  statuette2: 0
+  statuette3: 0
+  GoodNotes1: FaLaMiSiDoMiReSi
+  GoodNotes1_1: FaLaMiSiMiDoSiRe
+--- !u!114 &781433416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781433413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2309cfeeb40976341aadcfc5d987183c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnigmeCarillon3
+  Do: {fileID: 1189838295}
+  Re: {fileID: 1335893846}
+  Mi: {fileID: 405598200}
+  Fa: {fileID: 1551767546}
+  Sol: {fileID: 1863113164}
+  La: {fileID: 719298707}
+  Si: {fileID: 767374712}
+  Statuette1: {fileID: 0}
+  Statuette2: {fileID: 0}
+  Statuette3: {fileID: 0}
+  doActivate: {fileID: 1189838304}
+  reActivate: {fileID: 1335893853}
+  miActivator: {fileID: 405598207}
+  faActivator: {fileID: 1551767553}
+  solActivator: {fileID: 1863113171}
+  laActivator: {fileID: 719298714}
+  siActivator: {fileID: 767374719}
+  DoMi: 0
+  MiDo: 0
+  MiSol: 0
+  SolMi: 0
+  SiDo: 0
+  DoSi: 0
+  SolRe: 0
+  ReSol: 0
+  MiSi: 0
+  SiMi: 0
+  LaRe: 0
+  ReLa: 0
+  FaRe: 0
+  ReFa: 0
+  ReSi: 0
+  SiRe: 0
+  TypedNotesS3:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  NoteTyped: 0
+  statuette1: 0
+  statuette2: 0
+  statuette3: 0
+  GoodNotes3: MiSolFaReReLaLaSolDo
+  GoodNotes3_1: SolMiReFaLaReLaSolDo
+--- !u!114 &781433417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781433413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051b52201f82cb94a98cb937be435f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnigmeCarillon2
+  Do: {fileID: 1189838295}
+  Re: {fileID: 1335893846}
+  Mi: {fileID: 405598200}
+  Fa: {fileID: 1551767546}
+  Sol: {fileID: 1863113164}
+  La: {fileID: 719298707}
+  Si: {fileID: 767374712}
+  Statuette1: {fileID: 0}
+  Statuette2: {fileID: 0}
+  Statuette3: {fileID: 0}
+  doActivate: {fileID: 1189838304}
+  reActivate: {fileID: 1335893853}
+  miActivator: {fileID: 405598207}
+  faActivator: {fileID: 1551767553}
+  solActivator: {fileID: 1863113171}
+  laActivator: {fileID: 719298714}
+  siActivator: {fileID: 767374719}
+  DoMi: 0
+  MiDo: 0
+  MiSol: 0
+  SolMi: 0
+  SiDo: 0
+  DoSi: 0
+  SolRe: 0
+  ReSol: 0
+  MiSi: 0
+  SiMi: 0
+  LaRe: 0
+  ReLa: 0
+  FaRe: 0
+  ReFa: 0
+  ReSi: 0
+  SiRe: 0
+  TypedNotesS2: []
+  NoteTyped: 0
+  statuette1: 0
+  statuette2: 0
+  statuette3: 0
+  GoodNotes2: MiSolFaReReLaLaSolDo
+  GoodNotes2_1: SolMiReFaLaReLaSolDo
 --- !u!114 &810857095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4526,20 +4663,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1087736204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right Locomotion/Teleport Mode
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
 --- !u!114 &1107921739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4554,6 +4677,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
+--- !u!114 &1111909848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Right Interaction/Activate Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: c3ca6ed7-3d25-44a2-b1d8-5be4eb699370
 --- !u!1001 &1127950124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4713,7 +4850,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1941633270}
   gripValue:
     m_UseReference: 1
     m_Action:
@@ -4725,7 +4862,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1278284559}
   handAnimator: {fileID: 1156059844}
 --- !u!1 &1189838295
 GameObject:
@@ -4909,6 +5046,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: d20fc51c-7916-43a7-8b03-706049966aea
+--- !u!114 &1228329680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Right Interaction/Select Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
 --- !u!114 &1276745105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,6 +5074,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
+--- !u!114 &1278284559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Left Interaction/Select Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
 --- !u!1 &1335578714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,7 +5381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac97747f7cb74604d856b7b75c3026b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReActivate
-  Re: {fileID: 1335893846}
   IsRe: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &1358771695
@@ -5965,7 +6129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fff7d4bec5efdf42a381058249edff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FaActivator
-  Fa: {fileID: 1551767546}
   IsFa: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &1553255693
@@ -6572,7 +6735,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1087736204}
+    m_Reference: {fileID: 2036510566}
 --- !u!135 &1617073985
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6989,7 +7152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a00928f0a42265418d14b7311a4c4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SolActivator
-  Sol: {fileID: 1863113164}
   IsSol: 0
   enigmeCarillon: {fileID: 781433415}
 --- !u!1 &1880598668
@@ -7209,6 +7371,20 @@ Transform:
   - {fileID: 363117032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941633270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Left Interaction/Activate Value
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: 0c3d0ec9-85a1-45b3-839b-1ca43f859ecd
 --- !u!1 &1963331823
 GameObject:
   m_ObjectHideFlags: 0
@@ -7818,6 +7994,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2036510566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: XRI Right Locomotion/Teleport Mode
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
 --- !u!114 &2041739083
 MonoBehaviour:
   m_ObjectHideFlags: 0
