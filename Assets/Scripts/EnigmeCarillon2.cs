@@ -1,12 +1,8 @@
-using JetBrains.Annotations;
-using Mono.Cecil.Cil;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-public class EnigmeCarillon : MonoBehaviour
+public class EnigmeCarillon2 : MonoBehaviour
 {
     public GameObject Do;
     public GameObject Re;
@@ -15,8 +11,10 @@ public class EnigmeCarillon : MonoBehaviour
     public GameObject Sol;
     public GameObject La;
     public GameObject Si;
- 
+
     public GameObject Statuette1;
+    public GameObject Statuette2;
+    public GameObject Statuette3;
 
     public DoActivate doActivate;
     public ReActivate reActivate;
@@ -43,27 +41,28 @@ public class EnigmeCarillon : MonoBehaviour
     public bool ReSi;
     public bool SiRe;
 
-    public List<string> TypedNotesS1 = new List<string>(7);
+    public List<string> TypedNotesS2 = new List<string>(8);
     public int NoteTyped = 0;
 
     public bool statuette1;
     public bool statuette2;
     public bool statuette3;
 
-    public string GoodNotes1 = "FaLaMiSiDoMiReSi";
-    public string GoodNotes1_1 = "FaLaMiSiMiDoSiRe";
+    public string GoodNotes2 = "MiSolFaReReLaLaSolDo";
+    public string GoodNotes2_1 = "SolMiReFaLaReLaSolDo";
 
     public void Awake()
     {
-        TypedNotesS1[0] = "null";
-        TypedNotesS1[1] = "null";
-        TypedNotesS1[2] = "null";
-        TypedNotesS1[3] = "null";
-        TypedNotesS1[4] = "null";
-        TypedNotesS1[5] = "null";
-        TypedNotesS1[6] = "null";
-        TypedNotesS1[7] = "null";
-        statuette1 = true;
+        TypedNotesS2[0] = "null";
+        TypedNotesS2[1] = "null";
+        TypedNotesS2[2] = "null";
+        TypedNotesS2[3] = "null";
+        TypedNotesS2[4] = "null";
+        TypedNotesS2[5] = "null";
+        TypedNotesS2[6] = "null";
+        TypedNotesS2[7] = "null";
+        TypedNotesS2[8] = "null";
+        statuette2 = true;
     }
 
     public void Update()
@@ -83,7 +82,7 @@ public class EnigmeCarillon : MonoBehaviour
             MiSol = true;
             SolMi = true;
         }
-        if (faActivator.IsFa && reActivate.IsRe)    
+        if (faActivator.IsFa && reActivate.IsRe)
         {
             FaRe = true;
             ReFa = true;
@@ -112,82 +111,88 @@ public class EnigmeCarillon : MonoBehaviour
 
     public void Notes(string note)
     {
-        
-        if (TypedNotesS1[0] == "null")
-        {
-            TypedNotesS1[0] = note;
-            Console.WriteLine(TypedNotesS1[0]);
-            NoteTyped += 1;
-        }
-        else if(TypedNotesS1[1] == "null")
-        {
-            TypedNotesS1[1] = note;
-            Console.WriteLine(TypedNotesS1[1]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[2] == "null")
-        {
-            TypedNotesS1[2] = note;
-            Console.WriteLine(TypedNotesS1[2]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[3] == "null")
-        {
-            TypedNotesS1[3] = note;
-            Console.WriteLine(TypedNotesS1[3]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[4] == "null")
-        {
-            TypedNotesS1[4] = note;
-            Console.WriteLine(TypedNotesS1[4]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[5] == "null")
-        {
-            TypedNotesS1[5] = note;
-            Console.WriteLine(TypedNotesS1[5]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[6] == "null")
-        {
-            TypedNotesS1[6] = note;
-            Console.WriteLine(TypedNotesS1[6]);
-            NoteTyped += 1;
-        }
-        else if (TypedNotesS1[7] == "null")
-        {
-            TypedNotesS1[7] = note;
-            Console.WriteLine(TypedNotesS1[7]);
-            NoteTyped += 1;
-        }
 
+        if (TypedNotesS2[0] == "null")
+        {
+            TypedNotesS2[0] = note;
+            Console.WriteLine(TypedNotesS2[0]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[1] == "null")
+        {
+            TypedNotesS2[1] = note;
+            Console.WriteLine(TypedNotesS2[1]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[2] == "null")
+        {
+            TypedNotesS2[2] = note;
+            Console.WriteLine(TypedNotesS2[2]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[3] == "null")
+        {
+            TypedNotesS2[3] = note;
+            Console.WriteLine(TypedNotesS2[3]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[4] == "null")
+        {
+            TypedNotesS2[4] = note;
+            Console.WriteLine(TypedNotesS2[4]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[5] == "null")
+        {
+            TypedNotesS2[5] = note;
+            Console.WriteLine(TypedNotesS2[5]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[6] == "null")
+        {
+            TypedNotesS2[6] = note;
+            Console.WriteLine(TypedNotesS2[6]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[7] == "null")
+        {
+            TypedNotesS2[7] = note;
+            Console.WriteLine(TypedNotesS2[7]);
+            NoteTyped += 1;
+        }
+        else if (TypedNotesS2[8] == null)
+        {
+            TypedNotesS2[8] = null;
+            Console.WriteLine(TypedNotesS2[8]);
+            NoteTyped += 1;
+        }
         if (NoteTyped == 8)
         {
-            string resTypesN = string.Concat(TypedNotesS1);
+            string resTypesN = string.Concat(TypedNotesS2);
 
-            if (statuette1)
+            if (statuette2)
             {
-                if (resTypesN == GoodNotes1 || resTypesN == GoodNotes1_1 && DoMi || MiDo && ReSi || SiRe)
+                if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
                 {
                     Console.WriteLine("1111111111");
-                    statuette1 = true;
+                    statuette2= true;
                 }
                 else
                 {
                     NoteTyped = 0;
-                    TypedNotesS1[0] = "null";
-                    TypedNotesS1[1] = "null";
-                    TypedNotesS1[2] = "null";
-                    TypedNotesS1[3] = "null";
-                    TypedNotesS1[4] = "null";
-                    TypedNotesS1[5] = "null";
-                    TypedNotesS1[6] = "null";
-                    TypedNotesS1[7] = "null";
+                    TypedNotesS2[0] = "null";
+                    TypedNotesS2[1] = "null";
+                    TypedNotesS2[2] = "null";
+                    TypedNotesS2[3] = "null";
+                    TypedNotesS2[4] = "null";
+                    TypedNotesS2[5] = "null";
+                    TypedNotesS2[6] = "null";
+                    TypedNotesS2[7] = "null";
+                    TypedNotesS2[8] = "null";
                 }
             }
         }
 
-        
+
     }
 }

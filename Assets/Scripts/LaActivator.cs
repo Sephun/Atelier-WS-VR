@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class LaActivator : MonoBehaviour
 {
-    public GameObject La;
     public bool IsLa;
     public EnigmeCarillon enigmeCarillon;
 
@@ -10,11 +9,7 @@ public class LaActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsLa = true;
-        }
-        else
-        {
-            IsLa = false;
+            enigmeCarillon.Notes("La");
         }
     }
 }

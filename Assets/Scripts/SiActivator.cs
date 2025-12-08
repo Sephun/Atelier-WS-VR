@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SiActivator : MonoBehaviour
 {
-    public GameObject Si;
     public bool IsSi;
     public EnigmeCarillon enigmeCarillon;
 
@@ -10,11 +9,7 @@ public class SiActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsSi = true;
-        }
-        else
-        {
-            IsSi = false;
+            enigmeCarillon.Notes("Si");
         }
     }
 }

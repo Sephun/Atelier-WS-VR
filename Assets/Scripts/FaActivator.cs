@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class FaActivator : MonoBehaviour
 {
-    public GameObject Fa;
     public bool IsFa;
     public EnigmeCarillon enigmeCarillon;
 
@@ -10,11 +9,7 @@ public class FaActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsFa = true;
-        }
-        else
-        {
-            IsFa = false;
+            enigmeCarillon.Notes("Fa");
         }
     }
 }

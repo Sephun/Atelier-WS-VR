@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SolActivator : MonoBehaviour
 {
-    public GameObject Sol;
     public bool IsSol;
     public EnigmeCarillon enigmeCarillon;
 
@@ -10,11 +9,7 @@ public class SolActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsSol = true;
-        }
-        else
-        {
-            IsSol = false;
+            enigmeCarillon.Notes("Si");
         }
     }
 }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MiActivator : MonoBehaviour
 {
-    public GameObject Mi;
     public bool IsMi;
     public EnigmeCarillon enigmeCarillon;
 
@@ -10,11 +9,7 @@ public class MiActivator : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            IsMi = true;
-        }
-        else
-        {
-            IsMi = false;
+            enigmeCarillon.Notes("Mi");
         }
     }
 }
