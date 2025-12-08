@@ -1,0 +1,20 @@
+using UnityEngine;
+
+public class DoActivate : MonoBehaviour
+{
+    //public GameObject Do;
+    public bool IsDo;
+    public EnigmeCarillon enigmeCarillon;
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            IsDo = true;
+        }
+        else
+        {
+            IsDo = false;
+        }
+    }
+}
