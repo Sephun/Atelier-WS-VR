@@ -46,10 +46,6 @@ public class EnigmeCarillon : MonoBehaviour
     public List<string> TypedNotesS1 = new List<string>(7);
     public int NoteTyped = 0;
 
-    public bool statuette1;
-    public bool statuette2;
-    public bool statuette3;
-
     public string GoodNotes1 = "FaLaMiSiDoMiReSi";
     public string GoodNotes1_1 = "FaLaMiSiMiDoSiRe";
 
@@ -63,7 +59,6 @@ public class EnigmeCarillon : MonoBehaviour
         TypedNotesS1[5] = "null";
         TypedNotesS1[6] = "null";
         TypedNotesS1[7] = "null";
-        statuette1 = true;
     }
 
     public void Update()
@@ -166,28 +161,23 @@ public class EnigmeCarillon : MonoBehaviour
         {
             string resTypesN = string.Concat(TypedNotesS1);
 
-            if (statuette1)
+            if (resTypesN == GoodNotes1 || resTypesN == GoodNotes1_1 && DoMi || MiDo && ReSi || SiRe)
             {
-                if (resTypesN == GoodNotes1 || resTypesN == GoodNotes1_1 && DoMi || MiDo && ReSi || SiRe)
-                {
-                    Console.WriteLine("1111111111");
-                    statuette1 = true;
-                }
-                else
-                {
-                    NoteTyped = 0;
-                    TypedNotesS1[0] = "null";
-                    TypedNotesS1[1] = "null";
-                    TypedNotesS1[2] = "null";
-                    TypedNotesS1[3] = "null";
-                    TypedNotesS1[4] = "null";
-                    TypedNotesS1[5] = "null";
-                    TypedNotesS1[6] = "null";
-                    TypedNotesS1[7] = "null";
-                }
+               Console.WriteLine("1111111111");
             }
-        }
-
-        
+            else
+            {
+                NoteTyped = 0;
+                TypedNotesS1[0] = "null";
+                TypedNotesS1[1] = "null";
+                TypedNotesS1[2] = "null";
+                TypedNotesS1[3] = "null";
+                TypedNotesS1[4] = "null";
+                TypedNotesS1[5] = "null";
+                TypedNotesS1[6] = "null";
+                TypedNotesS1[7] = "null";
+            }
+            
+        }        
     }
 }

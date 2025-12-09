@@ -44,10 +44,6 @@ public class EnigmeCarillon2 : MonoBehaviour
     public List<string> TypedNotesS2 = new List<string>(8);
     public int NoteTyped = 0;
 
-    public bool statuette1;
-    public bool statuette2;
-    public bool statuette3;
-
     public string GoodNotes2 = "MiSolFaReReLaLaSolDo";
     public string GoodNotes2_1 = "SolMiReFaLaReLaSolDo";
 
@@ -62,7 +58,6 @@ public class EnigmeCarillon2 : MonoBehaviour
         TypedNotesS2[6] = "null";
         TypedNotesS2[7] = "null";
         TypedNotesS2[8] = "null";
-        statuette2 = true;
     }
 
     public void Update()
@@ -169,13 +164,10 @@ public class EnigmeCarillon2 : MonoBehaviour
         if (NoteTyped == 8)
         {
             string resTypesN = string.Concat(TypedNotesS2);
-
-            if (statuette2)
-            {
+         
                 if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
                 {
                     Console.WriteLine("1111111111");
-                    statuette2= true;
                 }
                 else
                 {
@@ -189,10 +181,7 @@ public class EnigmeCarillon2 : MonoBehaviour
                     TypedNotesS2[6] = "null";
                     TypedNotesS2[7] = "null";
                     TypedNotesS2[8] = "null";
-                }
-            }
+                }           
         }
-
-
     }
 }

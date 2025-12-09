@@ -45,10 +45,6 @@ public class EnigmeCarillon3 : MonoBehaviour
     public List<string> TypedNotesS3 = new List<string>(9);
     public int NoteTyped = 0;
 
-    public bool statuette1;
-    public bool statuette2;
-    public bool statuette3;
-
     public string GoodNotes3 = "MiSolFaReReLaLaSolDo";
     public string GoodNotes3_1 = "SolMiReFaLaReLaSolDo";
 
@@ -64,7 +60,6 @@ public class EnigmeCarillon3 : MonoBehaviour
         TypedNotesS3[7] = "null";
         TypedNotesS3[8] = "null";
         TypedNotesS3[9] = "null";
-        statuette3 = true;
     }
 
     public void Update()
@@ -178,30 +173,25 @@ public class EnigmeCarillon3 : MonoBehaviour
         {
             string resTypesN = string.Concat(TypedNotesS3);
 
-            if (statuette3)
+            if (resTypesN == GoodNotes3 || resTypesN == GoodNotes3_1 && ReSi || SiRe && MiSi || SiMi && SolRe || ReSol && SiDo || DoSi)
             {
-                if (resTypesN == GoodNotes3 || resTypesN == GoodNotes3_1 && ReSi || SiRe && MiSi || SiMi && SolRe || ReSol && SiDo || DoSi)
-                {
-                    Console.WriteLine("1111111111");
-                    statuette3 = true;
-                }
-                else
-                {
-                    NoteTyped = 0;
-                    TypedNotesS3[0] = "null";
-                    TypedNotesS3[1] = "null";
-                    TypedNotesS3[2] = "null";
-                    TypedNotesS3[3] = "null";
-                    TypedNotesS3[4] = "null";
-                    TypedNotesS3[5] = "null";
-                    TypedNotesS3[6] = "null";
-                    TypedNotesS3[7] = "null";
-                    TypedNotesS3[8] = "null";
-                    TypedNotesS3[9] = "null";
-                }
+                Console.WriteLine("1111111111");
+
+            }
+            else
+            {
+                NoteTyped = 0;
+                TypedNotesS3[0] = "null";
+                TypedNotesS3[1] = "null";
+                TypedNotesS3[2] = "null";
+                TypedNotesS3[3] = "null";
+                TypedNotesS3[4] = "null";
+                TypedNotesS3[5] = "null";
+                TypedNotesS3[6] = "null";
+                TypedNotesS3[7] = "null";
+                TypedNotesS3[8] = "null";
+                TypedNotesS3[9] = "null";
             }
         }
-
-
     }
 }
