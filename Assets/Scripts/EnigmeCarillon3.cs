@@ -13,10 +13,6 @@ public class EnigmeCarillon3 : MonoBehaviour
     public GameObject La;
     public GameObject Si;
 
-    public GameObject Statuette1;
-    public GameObject Statuette2;
-    public GameObject Statuette3;
-
     public DoActivate doActivate;
     public ReActivate reActivate;
     public MiActivator miActivator;
@@ -105,7 +101,6 @@ public class EnigmeCarillon3 : MonoBehaviour
             DoSi = true;
         }
     }
-
     public void Notes(string note)
     {
 
@@ -175,7 +170,7 @@ public class EnigmeCarillon3 : MonoBehaviour
 
             if (resTypesN == GoodNotes3 || resTypesN == GoodNotes3_1 && ReSi || SiRe && MiSi || SiMi && SolRe || ReSol && SiDo || DoSi)
             {
-                Console.WriteLine("1111111111");
+                Debug.Log("33333");
 
             }
             else

@@ -148,11 +148,11 @@ Transform:
   m_GameObject: {fileID: 1350704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7037951, z: -0, w: 0.7104031}
-  m_LocalPosition: {x: -0.02, y: 0.1044, z: -0.163}
-  m_LocalScale: {x: 0.09430604, y: 0.024498908, z: 0.09217785}
+  m_LocalPosition: {x: 2.0199602, y: 1.28298, z: -1.7733002}
+  m_LocalScale: {x: 0.09430603, y: 0.024498908, z: 0.092177846}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2693381981147467810}
+  m_Father: {fileID: 781433414}
   m_LocalEulerAnglesHint: {x: 0, y: -89.465, z: 0}
 --- !u!114 &1350706
 MonoBehaviour:
@@ -169,9 +169,9 @@ MonoBehaviour:
   statuette1: 0
   statuette2: 0
   statuette3: 0
-  enigmeCarillon: {fileID: 0}
-  enigmeCarillon2: {fileID: 0}
-  enigmeCarillon3: {fileID: 0}
+  enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
 --- !u!65 &1350707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1199,6 +1199,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 5.3193387e-13
       objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2007921
@@ -1485,6 +1489,10 @@ PrefabInstance:
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Name
       value: "Boite \xE0 musique 4 (fonc)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
@@ -2481,6 +2489,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiActivator
   IsMi: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &406098835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8008475018512002089, guid: 3fb53968fab4eb84caa9dd65a78353cb, type: 3}
@@ -3960,6 +3971,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaActivator
   IsLa: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &729794673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,6 +4253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SiActivator
   IsSi: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &781433413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4288,6 +4305,7 @@ Transform:
   - {fileID: 854190147}
   - {fileID: 396157031}
   - {fileID: 1553255694}
+  - {fileID: 1350705}
   - {fileID: 2693381981147467810}
   - {fileID: 1255672823}
   - {fileID: 1226492890}
@@ -4301,7 +4319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781433413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfed4cd3bbbf75d48af424bdaa2a0a4c, type: 3}
   m_Name: 
@@ -4313,7 +4331,6 @@ MonoBehaviour:
   Sol: {fileID: 1863113164}
   La: {fileID: 719298707}
   Si: {fileID: 767374712}
-  Statuette1: {fileID: 0}
   doActivate: {fileID: 1189838304}
   reActivate: {fileID: 1335893853}
   miActivator: {fileID: 405598207}
@@ -4356,7 +4373,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781433413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2309cfeeb40976341aadcfc5d987183c, type: 3}
   m_Name: 
@@ -4368,9 +4385,6 @@ MonoBehaviour:
   Sol: {fileID: 1863113164}
   La: {fileID: 719298707}
   Si: {fileID: 767374712}
-  Statuette1: {fileID: 0}
-  Statuette2: {fileID: 0}
-  Statuette3: {fileID: 0}
   doActivate: {fileID: 1189838304}
   reActivate: {fileID: 1335893853}
   miActivator: {fileID: 405598207}
@@ -4427,9 +4441,6 @@ MonoBehaviour:
   Sol: {fileID: 1863113164}
   La: {fileID: 719298707}
   Si: {fileID: 767374712}
-  Statuette1: {fileID: 0}
-  Statuette2: {fileID: 0}
-  Statuette3: {fileID: 0}
   doActivate: {fileID: 1189838304}
   reActivate: {fileID: 1335893853}
   miActivator: {fileID: 405598207}
@@ -4453,7 +4464,16 @@ MonoBehaviour:
   ReFa: 0
   ReSi: 0
   SiRe: 0
-  TypedNotesS2: []
+  TypedNotesS2:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   NoteTyped: 0
   GoodNotes2: MiSolFaReReLaLaSolDo
   GoodNotes2_1: SolMiReFaLaReLaSolDo
@@ -4983,7 +5003,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &884130055
 Rigidbody:
@@ -5749,6 +5769,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoActivate
   IsDo: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!114 &1210883194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5793,7 +5816,7 @@ Transform:
   m_GameObject: {fileID: 1226492889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.042, y: 1.326, z: -1.604}
+  m_LocalPosition: {x: 2.042, y: 1.32, z: -1.731}
   m_LocalScale: {x: 0.08932583, y: 0.27760363, z: 0.072420366}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6634,6 +6657,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReActivate
   IsRe: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &1341144257 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2134169185510893011, guid: 3fb53968fab4eb84caa9dd65a78353cb, type: 3}
@@ -6943,6 +6969,10 @@ PrefabInstance:
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Center.z
       value: 5.3193387e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
@@ -7984,6 +8014,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FaActivator
   IsFa: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &1553255693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8436,10 +8469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e605e2a67e893a346b3d05ebd94c3817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
-  BaMCollider1: {fileID: 0}
-  BaMCollider2: {fileID: 0}
-  BaMCollider3: {fileID: 0}
-  BaMCollider4: {fileID: 0}
 --- !u!1 &1600731031
 GameObject:
   m_ObjectHideFlags: 0
@@ -8660,7 +8689,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.08
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1617073986
 Rigidbody:
@@ -9134,6 +9163,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SolActivator
   IsSol: 0
   enigmeCarillon: {fileID: 781433415}
+  enigmeCarillon2: {fileID: 781433417}
+  enigmeCarillon3: {fileID: 781433416}
+  whichStatuette: {fileID: 1350706}
 --- !u!1 &1880598668
 GameObject:
   m_ObjectHideFlags: 0
@@ -9804,6 +9836,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 5.3193387e-13
       objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2007921
@@ -10142,6 +10178,10 @@ PrefabInstance:
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Center.z
       value: 5.3193387e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
@@ -10658,10 +10698,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6d6093361a48aca4dba4de64dcc0a27b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7841293724535582779, guid: 60681ddd0c882c04da5281980c7f6188, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1350705}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3480418091611804181, guid: 60681ddd0c882c04da5281980c7f6188, type: 3}
       insertIndex: -1
@@ -10683,6 +10720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 45086781}
     m_Modifications:
+    - target: {fileID: 1431715418774826355, guid: bf1222591eb94f14496aac3d7b8bda16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3120128833214555058, guid: bf1222591eb94f14496aac3d7b8bda16, type: 3}
       propertyPath: m_Name
       value: "Boite \xE0 musique (fonc)"
@@ -10892,6 +10933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Boite \xE0 musique 3 (fonc)"
       objectReference: {fileID: 0}
+    - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6695650309415432364, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.20079212
@@ -11005,6 +11050,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255133851203500676, guid: 7b27962d27ac91943991ab4f38fb94de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461037965552694140, guid: 7b27962d27ac91943991ab4f38fb94de, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6391569878582828600, guid: 7b27962d27ac91943991ab4f38fb94de, type: 3}

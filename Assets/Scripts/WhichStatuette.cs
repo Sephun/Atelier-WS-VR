@@ -14,24 +14,42 @@ public class WhichStatuette : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Statuette1")
+        if (other.gameObject.CompareTag("Statuette1"))
         {
             enigmeCarillon.enabled = true;
             enigmeCarillon2.enabled = false;
             enigmeCarillon3.enabled = false;
+            statuette1 = true;
+            statuette2 = false;
+            statuette3 = false;
 
         }
-        if (other.tag == "Statuette2")
+        else if (other.gameObject.CompareTag("Statuette2"))
         {
             enigmeCarillon2.enabled = true;
             enigmeCarillon.enabled = false;
             enigmeCarillon3.enabled = false;
+            statuette1 = false;
+            statuette2 = true;
+            statuette3 = false;
         }
-        if (other.tag == "Statuette3")
+        else if (other.gameObject.CompareTag("Statuette3"))
         {
             enigmeCarillon3.enabled = true;
             enigmeCarillon.enabled = false;
             enigmeCarillon2.enabled = false;
+            statuette1 = false;
+            statuette2 = false;
+            statuette3 = true;
+        }
+        else
+        {
+            enigmeCarillon3.enabled = false;
+            enigmeCarillon.enabled = false;
+            enigmeCarillon2.enabled = false;
+            statuette1 = false;
+            statuette2 = false;
+            statuette3 = false;
         }
     }
 }

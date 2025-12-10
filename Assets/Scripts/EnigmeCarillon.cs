@@ -15,8 +15,6 @@ public class EnigmeCarillon : MonoBehaviour
     public GameObject Sol;
     public GameObject La;
     public GameObject Si;
- 
-    public GameObject Statuette1;
 
     public DoActivate doActivate;
     public ReActivate reActivate;
@@ -163,7 +161,7 @@ public class EnigmeCarillon : MonoBehaviour
 
             if (resTypesN == GoodNotes1 || resTypesN == GoodNotes1_1 && DoMi || MiDo && ReSi || SiRe)
             {
-               Console.WriteLine("1111111111");
+               Debug.Log("1111111111");
             }
             else
             {
@@ -176,6 +174,7 @@ public class EnigmeCarillon : MonoBehaviour
                 TypedNotesS1[5] = "null";
                 TypedNotesS1[6] = "null";
                 TypedNotesS1[7] = "null";
+
             }
             
         }        

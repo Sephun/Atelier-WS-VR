@@ -12,10 +12,6 @@ public class EnigmeCarillon2 : MonoBehaviour
     public GameObject La;
     public GameObject Si;
 
-    public GameObject Statuette1;
-    public GameObject Statuette2;
-    public GameObject Statuette3;
-
     public DoActivate doActivate;
     public ReActivate reActivate;
     public MiActivator miActivator;
@@ -41,7 +37,7 @@ public class EnigmeCarillon2 : MonoBehaviour
     public bool ReSi;
     public bool SiRe;
 
-    public List<string> TypedNotesS2 = new List<string>(8);
+    public List<string> TypedNotesS2 = new List<string>(9);
     public int NoteTyped = 0;
 
     public string GoodNotes2 = "MiSolFaReReLaLaSolDo";
@@ -110,25 +106,21 @@ public class EnigmeCarillon2 : MonoBehaviour
         if (TypedNotesS2[0] == "null")
         {
             TypedNotesS2[0] = note;
-            Console.WriteLine(TypedNotesS2[0]);
             NoteTyped += 1;
         }
         else if (TypedNotesS2[1] == "null")
         {
             TypedNotesS2[1] = note;
-            Console.WriteLine(TypedNotesS2[1]);
             NoteTyped += 1;
         }
         else if (TypedNotesS2[2] == "null")
         {
             TypedNotesS2[2] = note;
-            Console.WriteLine(TypedNotesS2[2]);
             NoteTyped += 1;
         }
         else if (TypedNotesS2[3] == "null")
         {
             TypedNotesS2[3] = note;
-            Console.WriteLine(TypedNotesS2[3]);
             NoteTyped += 1;
         }
         else if (TypedNotesS2[4] == "null")
@@ -161,13 +153,13 @@ public class EnigmeCarillon2 : MonoBehaviour
             Console.WriteLine(TypedNotesS2[8]);
             NoteTyped += 1;
         }
-        if (NoteTyped == 8)
+        if (NoteTyped == 9)
         {
             string resTypesN = string.Concat(TypedNotesS2);
          
                 if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
                 {
-                    Console.WriteLine("1111111111");
+                    Debug.Log("2222");
                 }
                 else
                 {
