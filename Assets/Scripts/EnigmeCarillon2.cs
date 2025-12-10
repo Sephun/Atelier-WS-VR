@@ -12,9 +12,6 @@ public class EnigmeCarillon2 : MonoBehaviour
     public GameObject La;
     public GameObject Si;
 
-    public GameObject Statuette1;
-    public GameObject Statuette2;
-    public GameObject Statuette3;
 
     public DoActivate doActivate;
     public ReActivate reActivate;
@@ -104,7 +101,7 @@ public class EnigmeCarillon2 : MonoBehaviour
         }
     }
 
-    public void Notes(string note)
+    public void Notes2(string note)
     {
 
         if (TypedNotesS2[0] == "null")
@@ -161,13 +158,13 @@ public class EnigmeCarillon2 : MonoBehaviour
             Console.WriteLine(TypedNotesS2[8]);
             NoteTyped += 1;
         }
-        if (NoteTyped == 8)
+        if (NoteTyped == 9)
         {
             string resTypesN = string.Concat(TypedNotesS2);
          
                 if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
                 {
-                    Console.WriteLine("1111111111");
+                    Debug.Log("22222222222");
                 }
                 else
                 {

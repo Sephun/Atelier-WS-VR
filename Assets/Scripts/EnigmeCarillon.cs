@@ -103,7 +103,7 @@ public class EnigmeCarillon : MonoBehaviour
             SiDo = true;
             DoSi = true;
         }
-    }
+    } //Remettre en false tous!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     public void Notes(string note)
     {
@@ -163,7 +163,7 @@ public class EnigmeCarillon : MonoBehaviour
 
             if (resTypesN == GoodNotes1 || resTypesN == GoodNotes1_1 && DoMi || MiDo && ReSi || SiRe)
             {
-               Console.WriteLine("1111111111");
+               Debug.Log("1111111111");
             }
             else
             {
@@ -176,6 +176,9 @@ public class EnigmeCarillon : MonoBehaviour
                 TypedNotesS1[5] = "null";
                 TypedNotesS1[6] = "null";
                 TypedNotesS1[7] = "null";
+
+                DoMi = false;
+                MiDo = false;
             }
             
         }        
