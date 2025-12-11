@@ -20,22 +20,12 @@ public class EnigmeCarillon2 : MonoBehaviour
     public LaActivator laActivator;
     public SiActivator siActivator;
 
-    public bool DoMi;
-    public bool MiDo;
     public bool MiSol;
     public bool SolMi;
-    public bool SiDo;
-    public bool DoSi;
-    public bool SolRe;
-    public bool ReSol;
-    public bool MiSi;
-    public bool SiMi;
     public bool LaRe;
     public bool ReLa;
     public bool FaRe;
     public bool ReFa;
-    public bool ReSi;
-    public bool SiRe;
 
     public List<string> TypedNotesS2 = new List<string>(9);
     public int NoteTyped = 0;
@@ -58,16 +48,6 @@ public class EnigmeCarillon2 : MonoBehaviour
 
     public void Update()
     {
-        if (doActivate.IsDo && miActivator.IsMi)
-        {
-            DoMi = true;
-            MiDo = true;
-        }
-        if (reActivate.IsRe && siActivator.IsSi)
-        {
-            ReSi = true;
-            SiRe = true;
-        }
         if (miActivator.IsMi && solActivator.IsSol)
         {
             MiSol = true;
@@ -82,21 +62,6 @@ public class EnigmeCarillon2 : MonoBehaviour
         {
             ReLa = true;
             LaRe = true;
-        }
-        if (miActivator.IsMi && siActivator.IsSi)
-        {
-            MiSi = true;
-            SiMi = true;
-        }
-        if (solActivator.IsSol && reActivate.IsRe)
-        {
-            SolRe = true;
-            ReSol = true;
-        }
-        if (siActivator.IsSi && doActivate.IsDo)
-        {
-            SiDo = true;
-            DoSi = true;
         }
     }
 
@@ -147,9 +112,9 @@ public class EnigmeCarillon2 : MonoBehaviour
             Console.WriteLine(TypedNotesS2[7]);
             NoteTyped += 1;
         }
-        else if (TypedNotesS2[8] == null)
+        else if (TypedNotesS2[8] == "null")
         {
-            TypedNotesS2[8] = null;
+            TypedNotesS2[8] = note;
             Console.WriteLine(TypedNotesS2[8]);
             NoteTyped += 1;
         }
@@ -157,23 +122,30 @@ public class EnigmeCarillon2 : MonoBehaviour
         {
             string resTypesN = string.Concat(TypedNotesS2);
          
-                if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
-                {
-                    Debug.Log("2222");
-                }
-                else
-                {
-                    NoteTyped = 0;
-                    TypedNotesS2[0] = "null";
-                    TypedNotesS2[1] = "null";
-                    TypedNotesS2[2] = "null";
-                    TypedNotesS2[3] = "null";
-                    TypedNotesS2[4] = "null";
-                    TypedNotesS2[5] = "null";
-                    TypedNotesS2[6] = "null";
-                    TypedNotesS2[7] = "null";
-                    TypedNotesS2[8] = "null";
-                }           
+            if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
+            {
+               Debug.Log("2222");
+            }
+            else
+            {
+                NoteTyped = 0;
+                TypedNotesS2[0] = "null";
+                TypedNotesS2[1] = "null";
+                TypedNotesS2[2] = "null";
+                TypedNotesS2[3] = "null";
+                TypedNotesS2[4] = "null";
+                TypedNotesS2[5] = "null";
+                TypedNotesS2[6] = "null";
+                TypedNotesS2[7] = "null";
+                TypedNotesS2[8] = "null";
+
+                ReLa = false;
+                LaRe = false;
+                FaRe = false;
+                ReFa = false;
+                MiSol = false;
+                SolMi = false;
+            }           
         }
     }
 }

@@ -14,14 +14,17 @@ public class FaActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Fa");
+            IsFa = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Fa");
+            IsFa = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Fa");
+            IsFa = true;
         }
     }
 }

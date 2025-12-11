@@ -14,14 +14,17 @@ public class MiActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Mi");
+            IsMi = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Mi");
+            IsMi = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Mi");
+            IsMi = true;
         }
     }
 }

@@ -14,14 +14,17 @@ public class LaActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("La");
+            IsLa = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("La");
+            IsLa = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("La");
+            IsLa = true;
         }
     }
 }

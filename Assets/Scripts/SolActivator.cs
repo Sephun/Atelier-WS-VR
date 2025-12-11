@@ -14,14 +14,17 @@ public class SolActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Sol");
+            IsSol = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Sol");
+            IsSol = true;
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Sol");
+            IsSol = true;
         }
     }
 }
