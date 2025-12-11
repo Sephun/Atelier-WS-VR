@@ -13,10 +13,6 @@ public class EnigmeCarillon3 : MonoBehaviour
     public GameObject La;
     public GameObject Si;
 
-    public GameObject Statuette1;
-    public GameObject Statuette2;
-    public GameObject Statuette3;
-
     public DoActivate doActivate;
     public ReActivate reActivate;
     public MiActivator miActivator;
@@ -25,28 +21,20 @@ public class EnigmeCarillon3 : MonoBehaviour
     public LaActivator laActivator;
     public SiActivator siActivator;
 
-    public bool DoMi;
-    public bool MiDo;
-    public bool MiSol;
-    public bool SolMi;
     public bool SiDo;
     public bool DoSi;
     public bool SolRe;
     public bool ReSol;
     public bool MiSi;
     public bool SiMi;
-    public bool LaRe;
-    public bool ReLa;
-    public bool FaRe;
-    public bool ReFa;
     public bool ReSi;
     public bool SiRe;
 
-    public List<string> TypedNotesS3 = new List<string>(9);
+    public List<string> TypedNotesS3 = new List<string>(10);
     public int NoteTyped = 0;
 
-    public string GoodNotes3 = "MiSolFaReReLaLaSolDo";
-    public string GoodNotes3_1 = "SolMiReFaLaReLaSolDo";
+    public string GoodNotes3 = "ReSiMiSiFaSolReLaSiDo";
+    public string GoodNotes3_1 = "SiReSiMiFaReSolLaDoSi";
 
     public void Awake()
     {
@@ -64,30 +52,10 @@ public class EnigmeCarillon3 : MonoBehaviour
 
     public void Update()
     {
-        if (doActivate.IsDo && miActivator.IsMi)
-        {
-            DoMi = true;
-            MiDo = true;
-        }
         if (reActivate.IsRe && siActivator.IsSi)
         {
             ReSi = true;
             SiRe = true;
-        }
-        if (miActivator.IsMi && solActivator.IsSol)
-        {
-            MiSol = true;
-            SolMi = true;
-        }
-        if (faActivator.IsFa && reActivate.IsRe)
-        {
-            FaRe = true;
-            ReFa = true;
-        }
-        if (reActivate.IsRe && laActivator.IsLa)
-        {
-            ReLa = true;
-            LaRe = true;
         }
         if (miActivator.IsMi && siActivator.IsSi)
         {
@@ -105,7 +73,6 @@ public class EnigmeCarillon3 : MonoBehaviour
             DoSi = true;
         }
     }
-
     public void Notes(string note)
     {
 
@@ -157,25 +124,25 @@ public class EnigmeCarillon3 : MonoBehaviour
             Console.WriteLine(TypedNotesS3[7]);
             NoteTyped += 1;
         }
-        else if (TypedNotesS3[8] == null)
+        else if (TypedNotesS3[8] == "null")
         {
-            TypedNotesS3[8] = null;
+            TypedNotesS3[8] = note;
             Console.WriteLine(TypedNotesS3[8]);
             NoteTyped += 1;
         }
-        else if (TypedNotesS3 == null)
+        else if (TypedNotesS3[9] == "null")
         {
-            TypedNotesS3[9] = null;
+            TypedNotesS3[9] = note;
             Console.WriteLine(TypedNotesS3[9]);
-            NoteTyped -= 1;
+            NoteTyped += 1;
         }
-        if (NoteTyped == 9)
+        if (NoteTyped == 10)
         {
             string resTypesN = string.Concat(TypedNotesS3);
 
             if (resTypesN == GoodNotes3 || resTypesN == GoodNotes3_1 && ReSi || SiRe && MiSi || SiMi && SolRe || ReSol && SiDo || DoSi)
             {
-                Console.WriteLine("1111111111");
+                Debug.Log("33333333");
 
             }
             else
@@ -191,6 +158,15 @@ public class EnigmeCarillon3 : MonoBehaviour
                 TypedNotesS3[7] = "null";
                 TypedNotesS3[8] = "null";
                 TypedNotesS3[9] = "null";
+
+                SiDo = false;
+                DoSi = false;
+                SolRe = false;
+                ReSol = false;
+                MiSi = false;
+                SiMi = false;
+                ReSi = false;
+                SiRe = false;
             }
         }
     }
