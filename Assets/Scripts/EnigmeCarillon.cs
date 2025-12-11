@@ -15,8 +15,6 @@ public class EnigmeCarillon : MonoBehaviour
     public GameObject Sol;
     public GameObject La;
     public GameObject Si;
- 
-    public GameObject Statuette1;
 
     public DoActivate doActivate;
     public ReActivate reActivate;
@@ -28,18 +26,6 @@ public class EnigmeCarillon : MonoBehaviour
 
     public bool DoMi;
     public bool MiDo;
-    public bool MiSol;
-    public bool SolMi;
-    public bool SiDo;
-    public bool DoSi;
-    public bool SolRe;
-    public bool ReSol;
-    public bool MiSi;
-    public bool SiMi;
-    public bool LaRe;
-    public bool ReLa;
-    public bool FaRe;
-    public bool ReFa;
     public bool ReSi;
     public bool SiRe;
 
@@ -73,37 +59,7 @@ public class EnigmeCarillon : MonoBehaviour
             ReSi = true;
             SiRe = true;
         }
-        if (miActivator.IsMi && solActivator.IsSol)
-        {
-            MiSol = true;
-            SolMi = true;
-        }
-        if (faActivator.IsFa && reActivate.IsRe)    
-        {
-            FaRe = true;
-            ReFa = true;
-        }
-        if (reActivate.IsRe && laActivator.IsLa)
-        {
-            ReLa = true;
-            LaRe = true;
-        }
-        if (miActivator.IsMi && siActivator.IsSi)
-        {
-            MiSi = true;
-            SiMi = true;
-        }
-        if (solActivator.IsSol && reActivate.IsRe)
-        {
-            SolRe = true;
-            ReSol = true;
-        }
-        if (siActivator.IsSi && doActivate.IsDo)
-        {
-            SiDo = true;
-            DoSi = true;
-        }
-    } //Remettre en false tous!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    }
 
     public void Notes(string note)
     {
@@ -177,10 +133,11 @@ public class EnigmeCarillon : MonoBehaviour
                 TypedNotesS1[6] = "null";
                 TypedNotesS1[7] = "null";
 
+                ReSi = false;
+                SiRe = false;
                 DoMi = false;
                 MiDo = false;
             }
-            
         }        
     }
 }
