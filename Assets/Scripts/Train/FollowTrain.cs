@@ -78,7 +78,7 @@ public class FollowTrain : MonoBehaviour
 
         if(isHit && !hasFall)
         {
-            rb.AddForce(50f, 0f, 0f, ForceMode.Impulse);
+            //rb.AddForce(50f, 0f, 0f, ForceMode.Impulse);
             hasFall = true;
         }
 
