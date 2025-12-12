@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SiActivator : MonoBehaviour
 {
@@ -14,17 +15,24 @@ public class SiActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Si");
-            IsSi = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Si");
-            IsSi = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Si");
-            IsSi = true;
+            StartCoroutine(PutBoolTrue());
         }
+    }
+
+    public IEnumerator PutBoolTrue()
+    {
+        IsSi = true;
+        yield return new WaitForSeconds(.5f);
+        IsSi = false;
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SolActivator : MonoBehaviour
@@ -14,17 +15,25 @@ public class SolActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Sol");
-            IsSol = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Sol");
-            IsSol = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Sol");
-            IsSol = true;
+            StartCoroutine(PutBoolTrue());
         }
     }
+
+    public IEnumerator PutBoolTrue()
+    {
+        IsSol = true;
+        yield return new WaitForSeconds(.5f);
+        IsSol = false;
+    }
+
 }

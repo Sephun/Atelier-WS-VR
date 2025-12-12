@@ -9,6 +9,9 @@ TagManager:
   - Statuette2
   - Statuette3
   - BoiteMusique1
+  - BoiteMusique2
+  - BoiteMusique3
+  - BoiteMusique4
   layers:
   - Default
   - TransparentFX
