@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class MiActivator : MonoBehaviour
 {
     public bool IsMi;
@@ -14,17 +14,24 @@ public class MiActivator : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Mi");
-            IsMi = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Mi");
-            IsMi = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Mi");
-            IsMi = true;
+            StartCoroutine(PutBoolTrue());
         }
+    }
+
+    public IEnumerator PutBoolTrue()
+    {
+        IsMi = true;
+        yield return new WaitForSeconds(.5f);
+        IsMi = false;
     }
 }

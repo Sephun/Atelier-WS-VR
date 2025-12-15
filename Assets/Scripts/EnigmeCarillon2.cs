@@ -124,7 +124,7 @@ public class EnigmeCarillon2 : MonoBehaviour
          
             if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
             {
-               Debug.Log("2222");
+               Debug.Log("22222");
             }
             else
             {

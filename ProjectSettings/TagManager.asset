@@ -8,12 +8,10 @@ TagManager:
   - Statuette1
   - Statuette2
   - Statuette3
-  - Pillule
-  - Trompe
-  - Sceau
-  - TrompeN
-  - Bague
-  - Voiture
+  - BoiteMusique1
+  - BoiteMusique2
+  - BoiteMusique3
+  - BoiteMusique4
   layers:
   - Default
   - TransparentFX

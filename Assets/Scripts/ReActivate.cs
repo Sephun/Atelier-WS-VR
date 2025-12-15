@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ReActivate : MonoBehaviour
@@ -14,17 +15,24 @@ public class ReActivate : MonoBehaviour
         if (other.tag == "Player" && whichStatuette.statuette1)
         {
             enigmeCarillon.Notes("Re");
-            IsRe = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette2)
         {
             enigmeCarillon2.Notes("Re");
-            IsRe = true;
+            StartCoroutine(PutBoolTrue());
         }
         if (other.tag == "Player" && whichStatuette.statuette3)
         {
             enigmeCarillon3.Notes("Re");
-            IsRe = true;
+            StartCoroutine(PutBoolTrue());
         }
+    }
+
+    public IEnumerator PutBoolTrue()
+    {
+        IsRe = true;
+        yield return new WaitForSeconds(.5f);
+        IsRe = false;
     }
 }
