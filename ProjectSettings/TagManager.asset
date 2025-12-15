@@ -8,6 +8,12 @@ TagManager:
   - Statuette1
   - Statuette2
   - Statuette3
+  - Pillule
+  - Trompe
+  - Sceau
+  - TrompeN
+  - Bague
+  - Voiture
   layers:
   - Default
   - TransparentFX
