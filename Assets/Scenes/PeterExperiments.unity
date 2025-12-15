@@ -553,21 +553,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 59844435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e605e2a67e893a346b3d05ebd94c3817, type: 3}
+  m_Script: {fileID: 11500000, guid: f007882a731207149af8183c51426a0c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
-  OpenMusicBox1: {fileID: 0}
-  OpenMusicBox2: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique3
   OpenMusicBox3: {fileID: 1086691463}
-  OpenMusicBox4: {fileID: 0}
-  ClosedMusicBox1: {fileID: 0}
-  ClosedMusicBox2: {fileID: 0}
   ClosedMusicBox3: {fileID: 2101459053}
-  ClosedMusicBox4: {fileID: 0}
-  ClosedBoxPos1: {x: 0, y: 0, z: 0}
-  ClosedBoxPos2: {x: 0, y: 0, z: 0}
   ClosedBoxPos3: {x: 0, y: 0, z: 0}
-  ClosedBoxPos4: {x: 0, y: 0, z: 0}
 --- !u!1 &98104469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1033,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2067808645}
   - {fileID: 1578206986}
   - {fileID: 652563272}
   - {fileID: 737203458}
@@ -2963,7 +2953,6 @@ GameObject:
   - component: {fileID: 552121221}
   - component: {fileID: 552121220}
   - component: {fileID: 552121219}
-  - component: {fileID: 552121222}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Untagged
@@ -3063,31 +3052,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552121217}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &552121222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552121217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e93c52fcd1bf6344b0da17013a47820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TeleportatorActivator
-  teleportInteractor: {fileID: 0}
-  teleportActivationAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Teleport Activation
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7c96e0aa-177b-4fee-aad8-a28c158c22b3
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
 --- !u!114 &563795679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,7 +3289,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1111909848}
+    m_Reference: {fileID: 0}
   gripValue:
     m_UseReference: 1
     m_Action:
@@ -3337,7 +3301,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1228329680}
+    m_Reference: {fileID: 0}
   handAnimator: {fileID: 600911563}
 --- !u!1 &614273172
 GameObject:
@@ -6201,20 +6165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
---- !u!114 &1111909848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right Interaction/Activate Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: c3ca6ed7-3d25-44a2-b1d8-5be4eb699370
 --- !u!1001 &1127950124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6654,20 +6604,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1154049370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e605e2a67e893a346b3d05ebd94c3817, type: 3}
+  m_Script: {fileID: 11500000, guid: e32324c7e9fb7084c838d0da4257035d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
-  OpenMusicBox1: {fileID: 0}
-  OpenMusicBox2: {fileID: 0}
-  OpenMusicBox3: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique4
   OpenMusicBox4: {fileID: 1131015026}
-  ClosedMusicBox1: {fileID: 0}
-  ClosedMusicBox2: {fileID: 0}
-  ClosedMusicBox3: {fileID: 0}
   ClosedMusicBox4: {fileID: 284372565}
-  ClosedBoxPos1: {x: 0, y: 0, z: 0}
-  ClosedBoxPos2: {x: 0, y: 0, z: 0}
-  ClosedBoxPos3: {x: 0, y: 0, z: 0}
   ClosedBoxPos4: {x: 0, y: 0, z: 0}
 --- !u!1001 &1156059841
 PrefabInstance:
@@ -6767,7 +6708,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1941633270}
+    m_Reference: {fileID: 0}
   gripValue:
     m_UseReference: 1
     m_Action:
@@ -6779,7 +6720,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1278284559}
+    m_Reference: {fileID: 0}
   handAnimator: {fileID: 1156059844}
 --- !u!1 &1189838295
 GameObject:
@@ -6966,20 +6907,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: d20fc51c-7916-43a7-8b03-706049966aea
---- !u!114 &1228329680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right Interaction/Select Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
 --- !u!114 &1276745105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6994,20 +6921,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 39bbf1ac-21a3-413d-90f6-6dbf6efeaabe
---- !u!114 &1278284559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Left Interaction/Select Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: e6005f29-e4c1-4f3b-8bf7-3a28bab5ca9c
 --- !u!1 &1335578714
 GameObject:
   m_ObjectHideFlags: 0
@@ -8929,7 +8842,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 2036510566}
+    m_Reference: {fileID: 0}
 --- !u!135 &1617073985
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9553,21 +9466,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1878820376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e605e2a67e893a346b3d05ebd94c3817, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bb9a647954658b4a9ac289dac95a19f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
-  OpenMusicBox1: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique2
   OpenMusicBox2: {fileID: 737203459}
-  OpenMusicBox3: {fileID: 0}
-  OpenMusicBox4: {fileID: 0}
-  ClosedMusicBox1: {fileID: 0}
   ClosedMusicBox2: {fileID: 385076052}
-  ClosedMusicBox3: {fileID: 0}
-  ClosedMusicBox4: {fileID: 0}
-  ClosedBoxPos1: {x: 0, y: 0, z: 0}
   ClosedBoxPos2: {x: 0, y: 0, z: 0}
-  ClosedBoxPos3: {x: 0, y: 0, z: 0}
-  ClosedBoxPos4: {x: 0, y: 0, z: 0}
 --- !u!1 &1880598668
 GameObject:
   m_ObjectHideFlags: 0
@@ -9784,20 +9688,6 @@ Transform:
   - {fileID: 339123092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1941633270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Left Interaction/Activate Value
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: 0c3d0ec9-85a1-45b3-839b-1ca43f859ecd
 --- !u!1 &1963331823
 GameObject:
   m_ObjectHideFlags: 0
@@ -10407,20 +10297,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2036510566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: XRI Right Locomotion/Teleport Mode
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_ActionId: a6c7231d-c55d-4dd4-9e87-877bb5522ef5
 --- !u!114 &2041739083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10435,106 +10311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: c4990d70-7b8a-4ce1-b03c-da86716b8352
---- !u!1 &2067808642
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2067808645}
-  - component: {fileID: 2067808644}
-  - component: {fileID: 2067808643}
-  m_Layer: 0
-  m_Name: SocketMusicBox1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &2067808643
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067808642}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2067808644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067808642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayers:
-    m_Bits: 2
-  m_Handedness: 0
-  m_AttachTransform: {fileID: 0}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  m_HoverSocketSnapping: 0
-  m_SocketSnappingRadius: 0.1
-  m_SocketScaleMode: 0
-  m_FixedScale: {x: 1, y: 1, z: 1}
-  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!4 &2067808645
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067808642}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11125994, y: 0.89152, z: 0.5776999}
-  m_LocalScale: {x: 0.17692286, y: 0.17692286, z: 0.17692286}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 123431841}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2091960273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10641,7 +10417,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2126093235}
+      addedObject: {fileID: 2126093232}
   m_SourcePrefab: {fileID: 100100000, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
 --- !u!4 &2091960274 stripped
 Transform:
@@ -10817,7 +10593,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
   m_PrefabInstance: {fileID: 2091960273}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2126093235
+--- !u!114 &2126093232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10830,17 +10606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
   OpenMusicBox1: {fileID: 652563273}
-  OpenMusicBox2: {fileID: 0}
-  OpenMusicBox3: {fileID: 0}
-  OpenMusicBox4: {fileID: 0}
   ClosedMusicBox1: {fileID: 837237155}
-  ClosedMusicBox2: {fileID: 0}
-  ClosedMusicBox3: {fileID: 0}
-  ClosedMusicBox4: {fileID: 0}
   ClosedBoxPos1: {x: 0, y: 0, z: 0}
-  ClosedBoxPos2: {x: 0, y: 0, z: 0}
-  ClosedBoxPos3: {x: 0, y: 0, z: 0}
-  ClosedBoxPos4: {x: 0, y: 0, z: 0}
 --- !u!1001 &68446535983615868
 PrefabInstance:
   m_ObjectHideFlags: 0
