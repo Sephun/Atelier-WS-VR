@@ -9,6 +9,7 @@ TagManager:
   - Statuette2
   - Statuette3
   - BouleTrain
+  - Locomotive
   layers:
   - Default
   - TransparentFX
