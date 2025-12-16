@@ -25,7 +25,7 @@ public class OpenMusicBox : MonoBehaviour
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
-        if (other.CompareTag("MusicBoxsCollider3") && (boiteAMusique3.IsBox3))
+        if (other.CompareTag("MusicBoxCollider3") && (boiteAMusique3.IsBox3))
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
