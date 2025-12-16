@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_TagString
+      value: MusicBoxCollider3
+      objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Size.x
       value: 1.6082984
@@ -556,9 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f007882a731207149af8183c51426a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique3
-  OpenMusicBox3: {fileID: 1086691463}
-  ClosedMusicBox3: {fileID: 2101459053}
-  ClosedBoxPos3: {x: 0, y: 0, z: 0}
+  openMusicBox: {fileID: 0}
+  IsBox3: 0
 --- !u!1 &98104469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3955227131129288749, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique1
+      value: BoiteMusique2
       objectReference: {fileID: 0}
     - target: {fileID: 4439432959128419446, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1264,6 +1267,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.776
       objectReference: {fileID: 0}
+    - target: {fileID: 5867655903531619981, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      propertyPath: m_Name
+      value: couvercle_final
+      objectReference: {fileID: 0}
     - target: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       propertyPath: m_Name
       value: boite_7_qui_ouvre_3
@@ -1272,10 +1279,29 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BoiteMusique3
       objectReference: {fileID: 0}
+    - target: {fileID: 8674281736262895465, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      propertyPath: m_Name
+      value: couvercle_final
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717713499}
+    - targetCorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717713498}
+    - targetCorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717713497}
+    - targetCorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717713496}
+    - targetCorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717713495}
     - targetCorrespondingSourceObject: {fileID: 3955227131129288749, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1244308248}
@@ -1291,6 +1317,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3955227131129288749, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1244308249}
+    - targetCorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134603576}
+    - targetCorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134603575}
+    - targetCorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134603574}
+    - targetCorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134603573}
+    - targetCorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134603572}
     - targetCorrespondingSourceObject: {fileID: 1679521752983975591, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1878569605}
@@ -1307,6 +1348,235 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1878569607}
   m_SourcePrefab: {fileID: 100100000, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+--- !u!4 &134603569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7830838048667129846, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+  m_PrefabInstance: {fileID: 134603568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &134603570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3638021787470000277, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+  m_PrefabInstance: {fileID: 134603568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &134603571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8319983699385130067, guid: ed45fa77d989c75439de77fcd6b871d9, type: 3}
+  m_PrefabInstance: {fileID: 134603568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &134603572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f4c3b78fd7a274ab777385e0db37dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenMusicBox
+  openMusicBox: {fileID: 134603576}
+  boiteAMusique: {fileID: 2126093232}
+  boiteAMusique2: {fileID: 0}
+  boiteAMusique3: {fileID: 0}
+  boiteAMusique4: {fileID: 0}
+--- !u!65 &134603573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.001756797, y: 0.0018248477, z: 0.0011021278}
+  m_Center: {x: -0.000008686735, y: -0.0008662856, z: 0.00051111565}
+--- !u!114 &134603574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_PredictedVisualsTransform: {fileID: 134603569}
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
+  m_LimitLinearVelocity: 0
+  m_LimitAngularVelocity: 0
+  m_MaxLinearVelocityDelta: 10
+  m_MaxAngularVelocityDelta: 20
+--- !u!54 &134603575
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603570}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &134603576
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba0187ba24cbe7148811d58a453689c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &163092080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3475118261464492563, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
@@ -1725,7 +1995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique4
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_IsTrigger
@@ -4394,6 +4664,220 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ActionId: 83a7af0b-87e3-42c3-a909-95fbf8091e4f
+--- !u!114 &717713495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f4c3b78fd7a274ab777385e0db37dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenMusicBox
+  openMusicBox: {fileID: 717713496}
+  boiteAMusique: {fileID: 0}
+  boiteAMusique2: {fileID: 0}
+  boiteAMusique3: {fileID: 59844436}
+  boiteAMusique4: {fileID: 0}
+--- !u!95 &717713496
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba0187ba24cbe7148811d58a453689c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &717713497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_PredictedVisualsTransform: {fileID: 0}
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
+  m_LimitLinearVelocity: 0
+  m_LimitAngularVelocity: 0
+  m_MaxLinearVelocityDelta: 10
+  m_MaxAngularVelocityDelta: 20
+--- !u!54 &717713498
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603571}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &717713499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134603571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0017872434, y: 0.0018654049, z: 0.00110619}
+  m_Center: {x: -0.000017734284, y: -0.0008865604, z: 0.0005131486}
 --- !u!1 &719298707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,7 +7309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MusicBoxCollider4
       objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Size.x
@@ -7286,6 +7770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenMusicBox
   openMusicBox: {fileID: 1244308248}
+  boiteAMusique: {fileID: 0}
+  boiteAMusique2: {fileID: 1878820377}
+  boiteAMusique3: {fileID: 0}
   boiteAMusique4: {fileID: 0}
 --- !u!114 &1244308250
 MonoBehaviour:
@@ -10123,7 +10610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenMusicBox
   openMusicBox: {fileID: 1878569605}
-  boiteAMusique4: {fileID: 0}
+  boiteAMusique: {fileID: 0}
+  boiteAMusique2: {fileID: 0}
+  boiteAMusique3: {fileID: 0}
+  boiteAMusique4: {fileID: 1154049371}
 --- !u!1001 &1878820374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10147,6 +10637,10 @@ PrefabInstance:
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
+      propertyPath: m_TagString
+      value: MusicBoxCollider2
       objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Size.x
@@ -10254,9 +10748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb9a647954658b4a9ac289dac95a19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique2
-  OpenMusicBox2: {fileID: 737203459}
-  ClosedMusicBox2: {fileID: 385076052}
-  ClosedBoxPos2: {x: 0, y: 0, z: 0}
+  openMusicBox: {fileID: 0}
+  IsBox2: 0
 --- !u!1 &1880598668
 GameObject:
   m_ObjectHideFlags: 0
@@ -11127,7 +11620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique1
+      value: MusicBoxCollider1
       objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_Size.x
@@ -11399,9 +11892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e605e2a67e893a346b3d05ebd94c3817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoiteAMusique
-  OpenMusicBox1: {fileID: 652563273}
-  ClosedMusicBox1: {fileID: 837237155}
-  ClosedBoxPos1: {x: 0, y: 0, z: 0}
+  openMusicBox: {fileID: 0}
+  IsBox1: 0
 --- !u!1001 &68446535983615868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11739,7 +12231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3120128833214555058, guid: bf1222591eb94f14496aac3d7b8bda16, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique1
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4913956109485279966, guid: bf1222591eb94f14496aac3d7b8bda16, type: 3}
       propertyPath: m_LocalScale.x
@@ -11952,7 +12444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2868259339454998138, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique3
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4247430673171039167, guid: 62b743d401f1dad43a35cda539f4abfa, type: 3}
       propertyPath: m_IsTrigger
@@ -12087,7 +12579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7503850130372133357, guid: 7b27962d27ac91943991ab4f38fb94de, type: 3}
       propertyPath: m_TagString
-      value: BoiteMusique2
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

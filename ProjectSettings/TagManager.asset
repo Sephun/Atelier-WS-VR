@@ -10,6 +10,14 @@ TagManager:
   - Statuette3
   - BouleTrain
   - Locomotive
+  - BoiteMusique1
+  - BoiteMusique2
+  - BoiteMusique3
+  - BoiteMusique4
+  - MusicBoxCollider1
+  - MusicBoxCollider2
+  - MusicBoxCollider3
+  - MusicBoxCollider4
   layers:
   - Default
   - TransparentFX
