@@ -11,21 +11,21 @@ public class OpenMusicBox : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ColliderBox4") && (boiteAMusique4.IsBox4))
+        if (other.CompareTag("MusicBoxCollider4") && (boiteAMusique4.IsBox4))
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
 
-        if (other.CompareTag("ColliderBox1") && (boiteAMusique.IsBox1))
+        if (other.CompareTag("MusicBoxCollider1") && (boiteAMusique.IsBox1))
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
 
-        if (other.CompareTag("ColliderBox2") && (boiteAMusique2.IsBox2))
+        if (other.CompareTag("MusicBoxCollider2") && (boiteAMusique2.IsBox2))
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
-        if (other.CompareTag("ColliderBox3") && (boiteAMusique3.IsBox3))
+        if (other.CompareTag("MusicBoxsCollider3") && (boiteAMusique3.IsBox3))
         {
             openMusicBox.SetBool("openMusicBox", true);
         }
