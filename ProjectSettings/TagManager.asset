@@ -8,10 +8,8 @@ TagManager:
   - Statuette1
   - Statuette2
   - Statuette3
-  - BoiteMusique1
-  - BoiteMusique2
-  - BoiteMusique3
-  - BoiteMusique4
+  - BouleTrain
+  - Locomotive
   layers:
   - Default
   - TransparentFX

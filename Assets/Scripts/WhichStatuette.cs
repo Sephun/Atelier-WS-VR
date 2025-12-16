@@ -1,5 +1,6 @@
 using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class WhichStatuette : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class WhichStatuette : MonoBehaviour
             statuette2 = false;
             statuette3 = true;
         }
-        else
+        else if(other.gameObject == null)
         {
             enigmeCarillon3.enabled = false;
             enigmeCarillon.enabled = false;

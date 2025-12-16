@@ -32,10 +32,10 @@ public class FollowTrain : MonoBehaviour
         if(!isHit && !hasFall)
         {
             //StartCoroutine(AddTrainForce());
-            Quaternion TargetRota1 = Quaternion.Euler(0f, 0f, 0f);
-            Quaternion TargetRota2 = Quaternion.Euler(0f, 90f, 0f);
-            Quaternion TargetRota3 = Quaternion.Euler(0f, 180f, 0f);
-            Quaternion TargetRota4 = Quaternion.Euler(0f, -90f, 0f);
+            Quaternion TargetRota1 = Quaternion.Euler(0f, -90f, 0f);
+            Quaternion TargetRota2 = Quaternion.Euler(0f, 0, 0f);
+            Quaternion TargetRota3 = Quaternion.Euler(0f, 90f, 0f);
+            Quaternion TargetRota4 = Quaternion.Euler(0f, 180f, 0f);
 
             if(index == 1)
                 {
@@ -78,7 +78,7 @@ public class FollowTrain : MonoBehaviour
 
         if(isHit && !hasFall)
         {
-            rb.AddForce(50f, 0f, 0f, ForceMode.Impulse);
+            //rb.AddForce(50f, 0f, 0f, ForceMode.Impulse);
             hasFall = true;
         }
 
