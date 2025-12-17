@@ -10,6 +10,16 @@ TagManager:
   - Statuette3
   - BouleTrain
   - Locomotive
+  - Cercle 1
+  - Cercle 2
+  - Cercle 3
+  - Cercle 4
+  - Cercle 5
+  - Cercle 6
+  - Cercle 7
+  - Cercle 8
+  - Cercle 9
+  - Cercle 10
   layers:
   - Default
   - TransparentFX
