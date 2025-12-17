@@ -4,6 +4,7 @@ public class OpenMusicBox : MonoBehaviour
 {
 
     public Animator openMusicBox;
+    public Animator ifMusicBox;
     public BoiteAMusique boiteAMusique;
     public BoiteAMusique2 boiteAMusique2;
     public BoiteAMusique3 boiteAMusique3;
@@ -19,6 +20,7 @@ public class OpenMusicBox : MonoBehaviour
         if (other.CompareTag("MusicBoxCollider1") && (boiteAMusique.IsBox1))
         {
             openMusicBox.SetBool("openMusicBox", true);
+            ifMusicBox.SetBool("ifmusicbox", true);
         }
 
         if (other.CompareTag("MusicBoxCollider2") && (boiteAMusique2.IsBox2))
