@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnigmeCarillon2 : MonoBehaviour
 {
+    public AudioSource SuccessNoise;
+    public AudioSource FailNoise;
+
     public GameObject Do;
     public GameObject Re;
     public GameObject Mi;
@@ -124,7 +127,7 @@ public class EnigmeCarillon2 : MonoBehaviour
          
             if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
             {
-               Debug.Log("22222");
+                SuccessNoise.Play();
             }
             else
             {
@@ -145,6 +148,8 @@ public class EnigmeCarillon2 : MonoBehaviour
                 ReFa = false;
                 MiSol = false;
                 SolMi = false;
+
+                FailNoise.Play();
             }           
         }
     }
