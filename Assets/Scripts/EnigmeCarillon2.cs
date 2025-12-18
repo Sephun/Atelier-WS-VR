@@ -30,6 +30,8 @@ public class EnigmeCarillon2 : MonoBehaviour
     public bool FaRe;
     public bool ReFa;
 
+    public bool isFinished2;
+
     public List<string> TypedNotesS2 = new List<string>(9);
     public int NoteTyped = 0;
 
@@ -128,6 +130,7 @@ public class EnigmeCarillon2 : MonoBehaviour
             if (resTypesN == GoodNotes2 || resTypesN == GoodNotes2_1 && MiSol || SolMi && FaRe || ReFa && ReLa || LaRe)
             {
                 SuccessNoise.Play();
+                isFinished2 = true;
             }
             else
             {

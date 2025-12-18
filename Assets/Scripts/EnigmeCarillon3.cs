@@ -33,6 +33,8 @@ public class EnigmeCarillon3 : MonoBehaviour
     public bool ReSi;
     public bool SiRe;
 
+    public bool isFinished3;
+
     public List<string> TypedNotesS3 = new List<string>(10);
     public int NoteTyped = 0;
 
@@ -146,6 +148,7 @@ public class EnigmeCarillon3 : MonoBehaviour
             if (resTypesN == GoodNotes3 || resTypesN == GoodNotes3_1 && ReSi || SiRe && MiSi || SiMi && SolRe || ReSol && SiDo || DoSi)
             {
                 SuccessNoise.Play();
+                isFinished3 = true;
 
             }
             else

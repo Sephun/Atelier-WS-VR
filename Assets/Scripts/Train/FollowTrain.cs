@@ -111,6 +111,7 @@ public class FollowTrain : MonoBehaviour
         if(collision.gameObject.CompareTag("sol"))
         {
             statuetteEnfant.gameObject.SetActive(true);
+            isHit = true;
 
         }
     }
