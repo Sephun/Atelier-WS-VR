@@ -9,12 +9,19 @@ public class OpenMusicBox : MonoBehaviour
     public BoiteAMusique2 boiteAMusique2;
     public BoiteAMusique3 boiteAMusique3;
     public BoiteAMusique4 boiteAMusique4;
+    public GameObject bague;
+
+    public void Start()
+    {
+        bague.gameObject.SetActive(false);
+    }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("MusicBoxCollider4") && (boiteAMusique4.IsBox4))
         {
             openMusicBox.SetBool("openMusicBox", true);
+            bague.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("MusicBoxCollider1") && (boiteAMusique.IsBox1))
