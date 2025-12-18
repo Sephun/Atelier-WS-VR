@@ -9,6 +9,8 @@ public class FollowTrain : MonoBehaviour
 {
     public List<GameObject> waypoints;
     public XRGrabInteractable xRGrab;
+    public GameObject statuetteEnfant;
+    public Rigidbody RBtraintoit;
     public float speedTrain = 2f;
     public float speedRotaTrain = .2f;  
     int index = 0;
@@ -22,16 +24,17 @@ public class FollowTrain : MonoBehaviour
     {
         hasFall = false;
         xRGrab.enabled = false;
+        statuetteEnfant.gameObject.SetActive(false);
+        RBtraintoit.isKinematic = true;
+
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        //StartCoroutine(PunchTrain());
-
         if(!isHit && !hasFall)
         {
-            //StartCoroutine(AddTrainForce());
             Quaternion TargetRota1 = Quaternion.Euler(0f, -90f, 0f);
             Quaternion TargetRota2 = Quaternion.Euler(0f, 0, 0f);
             Quaternion TargetRota3 = Quaternion.Euler(0f, 90f, 0f);
@@ -78,7 +81,6 @@ public class FollowTrain : MonoBehaviour
 
         if(isHit && !hasFall)
         {
-            //rb.AddForce(50f, 0f, 0f, ForceMode.Impulse);
             hasFall = true;
         }
 
@@ -86,9 +88,18 @@ public class FollowTrain : MonoBehaviour
         {
             xRGrab.enabled = true;
             isHit = false;
+            RBtraintoit.useGravity = true;
             rb.useGravity = true;
+            RBtraintoit.isKinematic = false;
+            //StartCoroutine(Statuette1());
         }
     }
+
+    // public IEnumerator Statuette1()
+    // {
+    //     yield return new WaitForSeconds(2f);
+
+    // }
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -96,13 +107,11 @@ public class FollowTrain : MonoBehaviour
         {
             isHit = true;
         }
+
+        if(collision.gameObject.CompareTag("sol"))
+        {
+            statuetteEnfant.gameObject.SetActive(true);
+
+        }
     }
-
-
-    // IEnumerator PunchTrain()
-    // {
-    //     yield return new WaitForSeconds(4f);
-    //     isHit = true;
-
-    // }
 }

@@ -20,6 +20,10 @@ TagManager:
   - Cercle 8
   - Cercle 9
   - Cercle 10
+  - MusicBoxCollider2
+  - MusicBoxCollider3
+  - MusicBoxCollider4
+  - sol
   layers:
   - Default
   - TransparentFX
